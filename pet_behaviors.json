@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "task_id": "Mjlab-PetMotion-Flat-MicroDuck",
+  "observation_dimension": 61,
+  "behaviors": [
+    {"id": "approach_person", "command": {"vx": 0.12}, "simulator_ready": false, "hardware_ready": false},
+    {"id": "shy_retreat", "command": {"vx": -0.10}, "simulator_ready": false, "hardware_ready": false},
+    {"id": "nuzzle_left", "body_pose": {"y": 0.015, "roll": 0.12}, "simulator_ready": false, "hardware_ready": false},
+    {"id": "nuzzle_right", "body_pose": {"y": -0.015, "roll": -0.12}, "simulator_ready": false, "hardware_ready": false},
+    {"id": "happy_bounce", "body_pose_sequence": [{"z": -0.01}, {"z": 0.015}, {"z": 0.0}], "simulator_ready": false, "hardware_ready": false}
+  ]
+}

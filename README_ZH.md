@@ -52,6 +52,7 @@ uv run train <TASK_ID> --env.scene.num-envs 4096 \
 | `GroundPick` | 嘴部接触地面再恢复站立 |
 | `BallKick` | 固定区域球的踢击，actor 看不到球 |
 | `Roulade` | 前滚翻并回到双脚 |
+| `PetMotion` | 低速靠近/后退、左右贴近倾斜和兴奋起伏命令 |
 | `Velocity ... Rollers` | 被动轮滑移动 |
 | `Swizzle` | 对称 swizzle 滑行 |
 | `RollerCrouch` | 滑行中下蹲 |
@@ -71,7 +72,7 @@ uv run train <TASK_ID> --env.scene.num-envs 4096 \
 
 ## 机器人模型
 
-- `robot_walk.xml`：行走模型，减少躯干/头部碰撞。
+- `robot_walk.xml`：行走与 PetMotion 模型，减少躯干/头部碰撞。
 - `robot_allcollisions.xml`：起身、坐站、捡拾、踢球和翻滚。
 - `robot_allcollisions_rollers.xml`：滑轮任务。
 - `*_backlash.xml`：齿隙版本。
@@ -91,4 +92,3 @@ uv run --with pytest pytest tests/
 ```
 
 CPU 测试锁定关节映射、奖励符号、配置不变量和 NaN 保护。
-
